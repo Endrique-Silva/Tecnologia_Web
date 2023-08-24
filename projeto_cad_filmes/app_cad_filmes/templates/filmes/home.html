@@ -1,0 +1,13 @@
+{% extends 'filmes/base.html' %}
+{% block conteudo %}
+    <form action="{% url 'listagem_filmes' %}" method="post">
+        {% csrf_token %}
+        <div style="text-align: left;" class="container">
+            <h1>Cadastro de filmes</h1>
+                Nome <input name="nome" class="form-control-sm" type="text"> <br>
+                Descrição <input name="descrição" class="form-control-sm" type="text"> <br>
+                Duração <input name="duração" class="form-control-sm" type="number"> <br>
+                <button class="form-control-sm">Salvar</button>
+        </div>
+    </form>
+{% endblock %}
